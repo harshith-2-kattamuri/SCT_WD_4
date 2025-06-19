@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Todo List</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Smart Todo List</h1>
+    </header>
+    
+    <div class="todo-input-section">
+      <form id="todo-form">
+        <input 
+          type="text" 
+          id="todo-input" 
+          placeholder="Add a new task..." 
+          required
+        >        <input 
+          type="datetime-local" 
+          id="todo-datetime"
+          min=""
+        >
+        <button type="submit" class="add-btn">
+          <i class="fas fa-plus"></i> Add Task
+        </button>
+      </form>
+    </div>    <div class="todo-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+      <button class="clear-all-btn">
+        <i class="fas fa-trash-alt"></i> Clear All
+      </button>
+    </div><div class="todo-list" id="todo-list">
+      <!-- Todo items will be added here dynamically -->
+    </div>
+
+    <footer class="footer">
+      <p>Designed by <a href="https://github.com/harshith-2-kattamuri" target="_blank">Harshith</a></p>
+    </footer>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
